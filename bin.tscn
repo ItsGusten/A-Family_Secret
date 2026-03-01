@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctmblvsih82fw"]
+
+[ext_resource type="PackedScene" uid="uid://2rs3i1mvwmta" path="res://addons/Assets/trash_can_02/scene.gltf" id="1_bawqm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vg1ep"]
+size = Vector3(1, 0.8, 0.8)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_bawqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.1)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20000006, 0.099999994, -0.099999994)
+shape = SubResource("BoxShape3D_vg1ep")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://3d6gnjth7f8p"]
+
+[ext_resource type="Script" uid="uid://cp3ayiec0rr0r" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://cii0ewlrvyts5" path="res://addons/Home Screen/Game Jam Home Screen.png" id="2_7vrkn"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_06t4h")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 1083.0
+offset_top = 1125.0
+offset_right = 1990.0
+offset_bottom = 1317.0
+
+[node name="Help" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 1228.0
+offset_top = 1350.0
+offset_right = 1848.0
+offset_bottom = 1472.0
+
+[node name="Quit" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 1227.0
+offset_top = 1514.0
+offset_right = 1846.0
+offset_bottom = 1644.0
+
+[node name="GameJamHomeScreen" type="Sprite2D" parent="Button_manager"]
+position = Vector2(1476.2499, 897.49994)
+scale = Vector2(1.9202476, 1.7529296)
+texture = ExtResource("2_7vrkn")
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

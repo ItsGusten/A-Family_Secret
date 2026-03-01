@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dm53wwny1fev5"
+path="res://.godot/imported/roof-high-side-corner-inner.obj-c2d9f4aa2832d1c7624d3a73f0e57417.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roof-high-side-corner-inner.obj-c2d9f4aa2832d1c7624d3a73f0e57417.mesh"]
+
+source_file="res://addons/Assets/Models/OBJ format/roof-high-side-corner-inner.obj"
+dest_files=["res://.godot/imported/roof-high-side-corner-inner.obj-c2d9f4aa2832d1c7624d3a73f0e57417.mesh", "res://.godot/imported/roof-high-side-corner-inner.obj-c2d9f4aa2832d1c7624d3a73f0e57417.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

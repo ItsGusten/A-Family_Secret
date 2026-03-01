@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg5sgnu60abme"]
+
+[ext_resource type="Script" uid="uid://b7g07bv6pfo54" path="res://canvas_layer.gd" id="1_ujc6v"]
+
+[node name="DialogueUI" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_ujc6v")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

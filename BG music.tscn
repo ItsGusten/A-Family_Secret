@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://didvy7e67jh3i"]
+
+[ext_resource type="AudioStream" uid="uid://w3qjush8ejrm" path="res://addons/Assets/(FREE) Mysterious Suspense Background Music  Cinematic No Copyright Score by raspberrymusic - raspberrymusic.mp3" id="1_6bf5f"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_6bf5f")
+volume_db = 10.0
+autoplay = true

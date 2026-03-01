@@ -1,0 +1,11 @@
+Model Information:
+* title:	Trash Can 02
+* source:	https://sketchfab.com/3d-models/trash-can-02-a4ca1a1764e841cc9ce9259e699aebd9
+* author:	katykate (https://sketchfab.com/katykate)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Trash Can 02" (https://sketchfab.com/3d-models/trash-can-02-a4ca1a1764e841cc9ce9259e699aebd9) by katykate (https://sketchfab.com/katykate) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

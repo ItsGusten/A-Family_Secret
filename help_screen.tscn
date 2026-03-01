@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://tf5s3ksi1q3m"]
+
+[ext_resource type="Texture2D" uid="uid://b6nyqlb26mgb7" path="res://addons/Home Screen/Game Jam Help Screen.png" id="1_he7ji"]
+[ext_resource type="Script" uid="uid://cqud6j1cahspm" path="res://help_screen.gd" id="1_i44y6"]
+
+[node name="Help Screen" type="Node2D"]
+script = ExtResource("1_i44y6")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 1175.0
+offset_top = 1265.0
+offset_right = 1779.0
+offset_bottom = 1370.0
+
+[node name="GameJamHelpScreen" type="Sprite2D" parent="Button_manager"]
+position = Vector2(1475, 831)
+scale = Vector2(1.9186201, 1.6240234)
+texture = ExtResource("1_he7ji")
+
+[connection signal="pressed" from="Button_manager/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c13lcet5fxftf"
+path="res://.godot/imported/detail-crate-ropes.obj-63e697c2ff871ea7dc32f87a84fd6a3b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail-crate-ropes.obj-63e697c2ff871ea7dc32f87a84fd6a3b.mesh"]
+
+source_file="res://addons/Assets/Models/OBJ format/detail-crate-ropes.obj"
+dest_files=["res://.godot/imported/detail-crate-ropes.obj-63e697c2ff871ea7dc32f87a84fd6a3b.mesh", "res://.godot/imported/detail-crate-ropes.obj-63e697c2ff871ea7dc32f87a84fd6a3b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

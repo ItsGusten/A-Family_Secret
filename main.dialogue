@@ -1,0 +1,114 @@
+~ mom
+if State.saw_knife == "":
+	Detective: I should probably look for something interesting in the house
+elif State.saw_knife == "has":
+	Detective: Would you happen to know anything about the murder of your child?
+	- Where were you when the crime happened?
+		Mom: I was at the grocery store
+		Mom: Here is a receipt.
+		Receipt: 8/9/2026, 2pm, Spent 300$ at Costco
+	- Why do you have gloves on?
+		Mom:  I always wear gloves when I handle anything around the house… it’s just a habit of mine.
+		- Then why do you have a drop of blood on your gloves?
+			Mom: Oh you don't need to worry about that.
+			Mom: I accidently cut myself this morning.
+	- What are the pills in the bin for? [if State.saw_pills == "has":]
+		Mom: My husband takes those for his back. He’s always been… delicate
+		set State.talked_mom = "has"
+		if State.talked_mom and State.talked_dad and State.talked_brother == "has"
+			set State.talked_status = "has"
+=> END
+
+~ dad
+if State.saw_knife == "":
+	Detective: I should probably look for something interesting in the house
+elif State.saw_knife == "has":
+	Detective: Would you happen to know anything about the murder of your child?
+	- Where were you when the crime happened?
+		Dad: I was coming back from New York with my son. Here is the train ticket for it.
+		Train Ticket: 9/8/2026, 2pm arrival
+	- Why are you bleeding? Did you fight anyone?
+		Dad: I got injured because I tripped on the way home after hearing about what happened to my son.
+		Detective: It doesn't look like you are injured you look perfectly normal.
+		set State.talked_dad = "has"
+		if State.talked_mom and State.talked_dad and State.talked_brother == "has"
+			set State.talked_status = "has"
+	- What are the pills in the bin for? [if State.saw_pills == "has":]
+		Dad: Those are for me, I've always had a weak body. 
+=> END
+
+~ brother
+if State.saw_knife == "":
+	Detective: I should probably look for something interesting in the house
+elif State.saw_knife == "has":
+	- Where were you when the crime happened?
+		Brother: I was with my dad at New York. Here is my train ticket
+		Train Ticket: 9/8/2026, 2pm arrival
+	- What is the gun in the truck for? [if State.saw_gun == "has"]
+		Brother : It’s my hunting gun. I like to go hunting for weekends.
+		Detective: How come the gun is just laying there in the back of truck
+		Detective: Anyone can just come and take it
+		Brother: Im sorry, Dedective. I'll put in my safe immedietly.
+		set State.talked_brother = "has"
+		if State.talked_mom and State.talked_dad and State.talked_brother == "has"
+			set State.talked_status = "has"
+=> END
+
+~ police
+if State.saw_knife == ""
+	Detective: I should probably go look for something interesting in the house
+elif State.talked_status == "" and State.saw_knife == "has"
+	Detective: I should probably go question the family
+elif State.talked_status == "has" and State.saw_knife == "has"
+	Police Officer: Who do you think the murderer is?
+	- The mom
+		Police Officer: You got it right. Good job!
+		set State.won = "has"
+	- The dad
+		Police Officer: You got it wrong. Better luck next time
+	- The brother
+		Police Officer: You got it wrong. Better luck next time
+	- Try later
+=> END
+
+~ saw_knife
+if State.saw_knife == "":
+	Detective: IS THAT A KNIFE!?
+	Detective: I HAVE to get to the bottom of what happened here!
+	Detective: I should probably go ask the family members some questions and look for evidence.
+	set State.saw_knife = "has"
+elif State.saw_knife == "has":
+	Detective: I should probably go ask the family members some questions and look for evidence.
+=> END
+
+~ information
+if State.saw_knife == "has"
+	Background Info: Date : September 8th, 2025, 3pm. location : New Jersey, America.
+	Background Info: The victim died at Septbember 8th, 2025, 2pm. Victim had anger issues, is a retired professional boxer. He always stayed home, causing bad relationships with family.
+	Background Info: FYI, you should use all the information at your disposal
+elif State.saw_knife == ""
+	Detective: I should probably go look for something at the top floor of the house
+=> END
+
+~ saw_gun
+if State.saw_gun == "" and State.saw_knife == "has":
+	Detective: is that a gun?
+	Detective: That is pretty suspicious
+	Detective: I better go ask the family about it
+	set State.saw_gun = "has"
+elif State.saw_gun == "has":
+	Detective: I better go ask the family about it
+else:
+	Detective: I should probably go look for something at the top floor of the house
+=> END
+
+~ saw_pills
+if State.saw_pills == "" and State.saw_knife == "has":
+	Detective: Are those pills?
+	Detective: That is pretty suspicious
+	Detective: I better go ask the family about this
+	set State.saw_pills = "has"
+elif State.saw_pills == "has":
+	Detective: I better go ask the family about this
+else:
+	Detective: I should probably go look for something at the top floor of the house

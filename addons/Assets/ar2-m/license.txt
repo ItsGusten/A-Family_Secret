@@ -1,0 +1,11 @@
+Model Information:
+* title:	AR2-M
+* source:	https://sketchfab.com/3d-models/ar2-m-90528d2c7cfd432e9e605fe869dbd260
+* author:	Dreadler (https://sketchfab.com/Dreadler)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "AR2-M" (https://sketchfab.com/3d-models/ar2-m-90528d2c7cfd432e9e605fe869dbd260) by Dreadler (https://sketchfab.com/Dreadler) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

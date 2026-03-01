@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://di7h4gqw2p3b0"]
+
+[ext_resource type="PackedScene" uid="uid://by5j8iqlxvyyb" path="res://addons/Assets/Models/GLB format/stairs-wood.glb" id="1_enlwf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lildw"]
+size = Vector3(2, 5.5, 0.4)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="stairs-wood2" parent="." instance=ExtResource("1_enlwf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.7071068, 0, 0.7071068, 0.70710677, -5.9604645e-08, 2.0774605, 0.39643928)
+shape = SubResource("BoxShape3D_lildw")

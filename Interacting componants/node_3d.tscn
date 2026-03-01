@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpunb2cklcyej"]
+
+[ext_resource type="Script" uid="uid://b25cf2or2m8my" path="res://node_3d.gd" id="1_68a1o"]
+[ext_resource type="Script" uid="uid://df5bib8cxobqe" path="res://area_3d.gd" id="2_rs8ev"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mwlpb"]
+radius = 1.0
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_68a1o")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_rs8ev")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_mwlpb")
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 47.0
+offset_bottom = -25.0
+text = "E to Interact"
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

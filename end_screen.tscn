@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4n3auf46phki"]
+
+[ext_resource type="Script" uid="uid://brl5n4vbnl4gp" path="res://end_screen.gd" id="1_my301"]
+
+[node name="End Screen" type="Node2D"]
+script = ExtResource("1_my301")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 1925.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1929.0
+offset_bottom = 1091.0
+text = "Thank you for playing our game
+to go back to home screen, click anywhere"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
